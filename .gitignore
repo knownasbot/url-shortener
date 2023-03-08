@@ -1,0 +1,7 @@
+node_modules
+.env
+.env.test
+dist
+*.db
+*.db-journal
+prisma/migrations

@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary: rgb(59, 105, 255);
+    --primary-hover: rgb(47, 88, 221);
+    --primary-active: rgb(47, 88, 221);
+}
+
+* {
+    font-family: 'Open Sans', Verdana, sans-serif;
+}
+
+body {
+    margin-bottom: 5vh;
+}
+
+a {
+    color: var(--primary);
+}
+
+table {
+    table-layout: fixed;
+    border: 1px solid gray;
+    border-radius: 10px;
+    border-spacing: 0;
+    border-collapse: separate;
+}
+
+th, td {
+    padding: 10px;
+    overflow: hidden;
+    border-left: 1px solid gray;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+td {
+    width: 100%;
+    padding: 0 10px;
+    border-top: 1px solid gray;
+}
+
+tr td:first-child {
+    max-width: 500px;
+}
+th:first-child, td:first-child {
+    border-left: none;
+}
+
+.main, .info, .history {
+    margin: auto;
+    margin-top: 8vh;
+    max-width: 900px;
+}
+
+.quote {
+    font-size: 2.4em;
+    font-style: italic;
+    text-align: right;
+    color: rgb(102, 102, 102);
+}
+
+.quote p {
+    margin-top: 0;
+    font-size: 0.8em;
+}
+
+.shortener {
+    margin: auto;
+    padding: 10px;
+}
+
+.shortener input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1em;
+    
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.shortener button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+
+    border: none;
+    border-radius: 10px;
+
+    color: #fff;
+    background: var(--primary);
+
+    cursor: pointer;
+}
+
+.shortener button:hover {
+    background: var(--primary-hover);
+}
+
+.shortener button:active {
+    background: var(--primary-active);
+}
+
+.shortener .response {
+    margin-top: 10vh;
+}
+
+.shortener .response p {
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+
+.shortener .inputs .error {
+    border: 1px solid red !important;
+    color: red !important;
+}
+
+.info {
+    font-size: 2.5em;
+    text-align: center;
+    color: #1c1c1c;
+}
+
+.info b {
+    color: #000;
+}
+
+.history {
+    margin-top: 10vh;
+}
+
+.history a {
+    color: var(--primary-active);
+}
+
+.history .container {
+    overflow-x: auto;
+}
+
+.fadein {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+
+@media only screen and (max-width: 600px) {
+    .quote {
+        font-size: 1.6em;
+    }
+
+    .info {
+        font-size: 2em;
+    }
+
+    .success p a {
+        font-size: 0.8em;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.01);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

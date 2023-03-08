@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main fadein">
+        <div class="shortener">
+            <div class="quote">
+                <q>✨ Make the URL shorter than your dick ✨</q>
+                <p>~ 🤖 Me, 2022</p>
+            </div>
+            <div class="inputs">
+                <input type="text" name="url" id="url" placeholder="https://example.com/big-fake-url-...">
+                <button id="short"></button>
+            </div>
+            <div class="response">
+                <div class="error" hidden>
+                    <p>Unfortunately an error occurred. Try again later.</p>
+                </div>
+
+                <div class="success" hidden>
+                    <p>Success! Your short link is done 🎉</p>
+                    <p><a href="#" id="shortenedURL"></a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info">
+            Currently with <b id="shortCount">0</b> shortened URLs!
+        </div>
+
+        <div class="history" hidden>
+            <h2>History</h2>
+            <div class="container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Full</th>
+                            <th>Shorten</th>
+                            <th>Created at</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
